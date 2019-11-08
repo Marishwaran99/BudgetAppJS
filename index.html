@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <p>Available Budget in November 2019</p>
+        <p class="budget-value">5000</p>
+        <div class="header__text-box text-box--green">
+          <p>Income</p>
+          <p class="income-value">+ 0.00</p>
+        </div>
+        <div class="header__text-box text-box--red">
+          <p>Expense</p>
+          <div class="expense-value-container">
+            <p class="expense-value">- 0.00</p>
+            <p class="percent-value"></p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container">
+        <div class="main__input-container">
+          <select class="type"
+            ><option value="inc">+</option
+            ><option value="exp">-</option></select
+          >
+          <input
+            type="text"
+            class="description"
+            id="description"
+            placeholder="Description"
+          />
+          <input type="number" class="amount" id="value" placeholder="Value" />
+          <button class="check-btn"><p class="tick-symbol">&#10004;</p></button>
+        </div>
+      </div>
+      <div class="main__income-expense-container">
+        <ul class="income-expense-list">
+          <li class="income-item">
+            <div class="item--head">
+              <p class="text--green">Income</p>
+            </div>
+            <div class="item">
+              <p>Purchase Website</p>
+              <p class="text--green">+2500</p>
+            </div>
+            <div class="item">
+              <p>Purchase Website</p>
+              <p class="text--green">+2500</p>
+            </div>
+          </li>
+          <li class="expense-item">
+            <div class="item--head">
+              <p class="text--red">Expense</p>
+            </div>
+            <div class="item">
+              <p>Purchase Website</p>
+              <p class="text--red">+2500</p>
+            </div>
+            <div class="item">
+              <p>Purchase Website</p>
+              <p class="text--red">+2500</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
