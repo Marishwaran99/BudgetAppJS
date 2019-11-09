@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   outline: none;
+  transition: all 200ms;
   box-sizing: border-box;
 }
 html {
@@ -32,7 +33,6 @@ body {
 }
 .header__container p {
   font-size: 1.6rem;
-
   letter-spacing: 0.1rem;
   color: white;
   margin: 1rem 0;
@@ -52,13 +52,21 @@ p.budget-value {
   margin: 1rem 0;
   width: 25rem;
 }
-.expense-value-container {
+.value-container {
   display: flex;
   align-items: center;
 }
+.close-icon {
+  background: none;
+  border: none;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
 .percent-value {
   background: lightcoral;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem !important;
   border-radius: 0.5rem;
   margin-left: 1rem !important;
 }
@@ -91,7 +99,11 @@ p.budget-value {
   width: 2.5rem;
   height: 2.5rem;
   text-align: center;
-  border: 1px solid var(--green);
+  border: 2px solid var(--green);
+}
+.tick-symbol.red {
+  border: 2px solid var(--red);
+  color: var(--red);
 }
 .income-expense-list {
   display: grid;
@@ -140,8 +152,11 @@ input {
 input#value {
   width: 10rem;
 }
-input:focus {
-  border: 1px solid var(--green);
+.green:focus {
+  border: 2px solid var(--green);
+}
+.red:focus {
+  border: 2px solid var(--red);
 }
 .text--red {
   color: var(--red);
